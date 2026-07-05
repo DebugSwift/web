@@ -1,4 +1,6 @@
-const FRAME = "/iphone-17-pro-cosmic-orange.png";
+import { assetPath } from "@/lib/asset-path";
+
+const FRAME = assetPath("/iphone-17-pro-cosmic-orange.png");
 
 /** Fixed width — every framed screenshot uses the same device size. */
 export const PHONE_MOCKUP_CLASS = "w-[280px]";

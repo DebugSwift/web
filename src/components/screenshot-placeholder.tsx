@@ -1,4 +1,5 @@
 import { IPhoneMockup } from "@/components/iphone-mockup";
+import { assetPath } from "@/lib/asset-path";
 
 export function ScreenshotPlaceholder({
   alt,
@@ -19,7 +20,7 @@ export function ScreenshotPlaceholder({
       <div
         className={`flex w-full items-center justify-center py-12 sm:py-14 ${className}`}
       >
-        <IPhoneMockup alt={alt} image={image} />
+        <IPhoneMockup alt={alt} image={assetPath(image)} />
       </div>
     );
   }
@@ -29,7 +30,7 @@ export function ScreenshotPlaceholder({
       className={`relative w-full overflow-hidden border border-white/10 bg-zinc-900 ${aspectClass} ${className}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={image} alt={alt} className="h-full w-full object-cover object-top" />
+      <img src={assetPath(image)} alt={alt} className="h-full w-full object-cover object-top" />
     </div>
   );
 }

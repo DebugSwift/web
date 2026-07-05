@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/asset-path";
+
 export const site = {
   name: "DebugSwift",
   tagline: "All-in-one debugging for Swift & iOS apps",
@@ -5,7 +7,7 @@ export const site = {
     "Open-source in-app debugging toolkit for iOS. Inspect network traffic, monitor performance, browse resources, and debug UI, all from a floating overlay inside your app.",
   url: "https://debugswift.dev",
   github: "https://github.com/DebugSwift/DebugSwift",
-  logo: "/logo.png",
+  logo: assetPath("/logo.png"),
   logoSource:
     "https://github.com/DebugSwift/DebugSwift/assets/31082311/3d219290-ba08-441a-a4c7-060f946683c2",
   docs: "https://debugswift.dev/docs",
