@@ -3,7 +3,8 @@ import type { DocBlock } from "./docs";
 const IMG = "/app-screenshots/docs";
 
 function shot(alt: string, file: string): DocBlock {
-  return { type: "screenshot", alt, image: `${IMG}/${file}` };
+  const name = file.endsWith(".png") ? file : `${file}.png`;
+  return { type: "screenshot", alt, image: `${IMG}/${name}` };
 }
 
 export type BlogArticle = {
