@@ -3,6 +3,8 @@ import { getAllDocSlugs } from "@/lib/docs";
 import { blogPosts } from "@/lib/routes";
 import { site } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 const routes = [
   "",
   "philosophy",

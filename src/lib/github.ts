@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 export async function getGitHubStars(): Promise<number> {
   try {
     const res = await fetch("https://api.github.com/repos/DebugSwift/DebugSwift", {
-      next: { revalidate: 3600 },
+      cache: "force-cache",
       headers: { Accept: "application/vnd.github+json" },
     });
     if (!res.ok) return 0;
